@@ -1,15 +1,10 @@
-<script setup>
-import SizeSelector from './components/SizeSelector.vue'
-import { ref } from 'vue'
-const selectedSize = ref('S')
-</script>
+<script setup></script>
 
 <template>
-  <h1>Seleccione la talla: {{ selectedSize }}</h1>
-  <SizeSelector
-    :selected-size="selectedSize"
-    @on-change-size="selectedSize = $event"
-  />
+  <router-link to="/">Home</router-link>
+  {{ ' ' }}
+  <router-link to="/counter">Counter</router-link>
+  <router-view></router-view>
 </template>
 
 <style>
